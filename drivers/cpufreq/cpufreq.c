@@ -2322,7 +2322,8 @@ __setup("no_underclock", get_cpu_underclock);
 #endif
 
 #if defined(CONFIG_MACH_XIAOMI_A4) || defined(CONFIG_MACH_XIAOMI_A8) || defined(CONFIG_MACH_XIAOMI_B7)
-#define UNDERCLK_MAX_BIGCL 2150400
+#define UNDERCLK_MAX_BIGCL 2342400
+#define UNDERCLK_MAX_LITTLECL 1593600
 static bool no_cpu_underclock;
 
 static int __init get_cpu_underclock(char *unused)
@@ -2349,7 +2350,12 @@ static int cpufreq_set_policy(struct cpufreq_policy *policy,
 			if (new_policy->max > UNDERCLK_MAX_BIGCL)
 				new_policy->max = UNDERCLK_MAX_BIGCL;
 		}
+		else {
+			if (new_policy->max > UNDERCLK_MAX_LITTLECL)
+				new_policy->max = UNDERCLK_MAX_LITTLECL;
+		}
 	}
+	
 #endif
 
 #ifdef CONFIG_MACH_XIAOMI_A7
