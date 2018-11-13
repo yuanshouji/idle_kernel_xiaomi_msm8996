@@ -1,3 +1,16 @@
+        Idle kernel v1.0
+        Features:
+
+-Upstreamed to 3.18.115
+-CPU governors: Despair, Alucard, Nightmare, Elementalx, Smartmax, ConservativeX, Bioshock, Lionheart, Impulse, Wheatley, Blue active, Nebula, Lionfish
+-IO Schedulers: Zen, VR, Tripndroid, Sioplus, Fifo, SIO, Fiops, 
+-Wakelock blocker
+-Adreno Idler
+-Arch Power Savings
+-Gentle Fair Sleepers
+-KCAL
+-Underclocked little cores to 1,6Ghz
+
         Linux kernel release 3.x <http://kernel.org/>
 
 These are the release notes for Linux version 3.  Read them carefully,
