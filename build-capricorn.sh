@@ -3,7 +3,7 @@
 KERNEL_DIR=$PWD
 ANYKERNEL_DIR=$KERNEL_DIR/AnyKernel2
 DATE=$(date +"%d%m%Y")
-KERNEL_NAME="idle-pie-hmp"
+KERNEL_NAME="ActiveKernel"
 DEVICE="-capricorn-"
 FINAL_ZIP="$KERNEL_NAME""$DEVICE""$DATE".zip
 
