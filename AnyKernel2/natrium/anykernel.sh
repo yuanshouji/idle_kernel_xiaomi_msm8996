@@ -29,6 +29,16 @@ chown -R root:root $ramdisk/*;
 ## AnyKernel install
 dump_boot;
 
+## begin ramdisk changes
+
+# add active script
+insert_line init.rc "import /init.active.rc" before "import /init.environ.rc" "import /init.active.rc";
+
+# ramdisk patch
+ramdisk_patch;
+
+## end ramdisk changes
+
 write_boot;
 
 ## end install
